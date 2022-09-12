@@ -1,0 +1,29 @@
+{% extends 'users.html' %}
+{% block content %}
+<h6 class="alert alert-primary mt-2"> Search student</h6>
+<div class="container-sm">
+
+<p><table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">sno</th>
+              <th scope="col">Name</th>
+              <th scope="col">Class</th>
+                <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+           {% for user in searchuser %}
+            <tr>
+              <th scope="row">{{loop.index}}</th>
+              <td>{{user.name}}</td>
+              <td>{{user.class}}</td>
+              <td>{{user.phone}}</td>
+
+            </tr>
+          </tbody>
+                {% endfor %}
+        </table>
+</p>
+</div>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'users.html' %}
+{% block content %}
+<h2 class=""> Update student data</h2>
+<form action="" method="post">
+    <div class=" col-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{alluser.name}}" required>
+
+          </div>
+          <div class="col-6">
+            <label for="class" class="form-label">Class</label>
+            <input type="text" class="form-control " id="class" name="class" value="{{alluser.class}}"required>
+          </div>
+          <div class="col-6">
+               <label class="form-label" for="phone">Phone number</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{alluser.phone}}"required>
+
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm mt-1">Update</button>
+</form>
+
+{% endblock content %}
